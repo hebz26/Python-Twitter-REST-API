@@ -23,12 +23,14 @@ This Flask application serves as a simple API to retrieve Twitter data from a pr
 1. Open the Postman Desktop App
 2. Under Integration testing, select Get.
 3. Paste the link you copied from the terminal ("http://127.0.0.1:5000/")
-4. Now you can test it with these lines
-   http://127.0.0.1:5000/tweets,
-   http://127.0.0.1:5000/external_links,
-   http://127.0.0.1:5000/tweet_details/tweet_id,
-   http://127.0.0.1:5000/user_profile/screen_name
-5. Make sure you replace tweet_id and screen_name with valid values.
+4. Now you can test it with these lines:
+
+   - http://127.0.0.1:5000/tweets
+   - http://127.0.0.1:5000/external_links
+   - http://127.0.0.1:5000/tweet_details/tweet_id
+   - http://127.0.0.1:5000/user_profile/screen_name
+
+5. Make sure you replace `tweet_id` and `screen_name` with valid values.
    Here are some from the file you can use:
-   Tweet IDs: 311975360667459585, 311964132205268992, 311828115477372928, 311468922962587651, 311432631726264320
-   Screen Names: timoreilly, MarkUry, zephoria, SarahPrevette, johnmaeda
+   - Tweet IDs: 311975360667459585, 311964132205268992, 311828115477372928, 311468922962587651, 311432631726264320
+   - Screen Names: timoreilly, MarkUry, zephoria, SarahPrevette, johnmaeda
