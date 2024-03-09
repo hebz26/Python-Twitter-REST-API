@@ -1,92 +1,34 @@
-Flask Twitter API
+# Python Twitter Rest API
+
 This Flask application serves as a simple API to retrieve Twitter data from a provided JSON file. It exposes several endpoints to retrieve tweets, extract external links, fetch details of a specific tweet by its ID, and obtain detailed profile information about a specific Twitter user by their screen name.
 
-Installation
-Clone this repository to your local machine:
+## Cloning the Repository in VS Code
 
-bash
-Copy code
-git clone <repository-url>
-Navigate to the project directory:
+1. Open VS Code.
+2. Go to View -> Command Palette (or press `Ctrl+Shift+P` on Windows/Linux, `Cmd+Shift+P` on Mac).
+3. Type `Git: Clone` and select it.
+4. Enter the repository URL: `https://github.com/hebz26/Python-Twitter-REST-API`
+5. Choose a local directory where you want to clone the repository and click `Select Repository Location`.
+6. Once cloned, a prompt will ask if you want to open the cloned repository. Click `Open`.
 
-bash
-Copy code
-cd flask-twitter-api
-Install the required dependencies:
+## Running the appliction in VS Code
 
-bash
-Copy code
-pip install -r requirements.txt
-Usage
-Run the Flask application:
+1. Make sure you have python installed.
+2. Open the terminal in VS Code.
+3. Type python main.py run or python3 main.py run
+4. Copy the link that it gives you ("http://127.0.0.1:5000/")
 
-bash
-Copy code
-python app.py
-Once the server is running, you can access the API endpoints using the following base URL:
+## Testing in Postman
 
-arduino
-Copy code
-http://localhost:5000
-API Endpoints
-Get All Tweets
-URL: /tweets
-Method: GET
-Description: Retrieves all tweets from the JSON file.
-Sample Response:
-json
-Copy code
-[
-{
-"Created at": "Wed Mar 13 23:01:36 +0000 2013",
-"Tweet ID": 311975360667459585,
-"Text": "Was wondering why @billgates cc'd me on story abt @MSFTResearch cool viral search tool; discovered I'm featured in it http:\/\/t.co\/g6oSeEIEUr"
-},
-...
-]
-Get All External Links
-URL: /external_links
-Method: GET
-Description: Extracts all external links from the tweets.
-Sample Response:
-json
-Copy code
-{
-"311975360667459585": [
-"http:\/\/t.co\/g6oSeEIEUr"
-],
-...
-}
-Get Tweet Details by ID
-URL: /tweet_details/<tweet_id>
-Method: GET
-Description: Retrieves details of a specific tweet by its ID.
-Sample Response:
-json
-Copy code
-{
-"Created at": "Wed Mar 13 23:01:36 +0000 2013",
-"Text": "Was wondering why @billgates cc'd me on story abt @MSFTResearch cool viral search tool; discovered I'm featured in it http:\/\/t.co\/g6oSeEIEUr",
-"User's screen name": "timoreilly"
-}
-Get User Profile by Screen Name
-URL: /user_profile/<screen_name>
-Method: GET
-Description: Retrieves detailed profile information about a specific Twitter user by their screen name.
-Sample Response:
-json
-Copy code
-{
-"Location": "Sebastopol, CA",
-"Description": "Founder and CEO, O'Reilly Media. Watching the alpha geeks, sharing their stories, helping the future unfold.",
-"Followers count": 1679016,
-"Friends count": 1012
-}
-Testing with Postman
-Download and install Postman.
-
-Open Postman and import the provided collection: Flask Twitter API.postman_collection.json.
-
-Once imported, you will find the collection containing requests for each API endpoint.
-
-Click on the desired request, then click "Send" to execute the request and view the response.
+1. Open the Postman Desktop App
+2. Under Integration testing, select Get.
+3. Paste the link you copied from the terminal ("http://127.0.0.1:5000/")
+4. Now you can test it with these lines
+   http://127.0.0.1:5000/tweets,
+   http://127.0.0.1:5000/external_links,
+   http://127.0.0.1:5000/tweet_details/tweet_id,
+   http://127.0.0.1:5000/user_profile/screen_name
+5. Make sure you replace tweet_id and screen_name with valid values.
+   Here are some from the file you can use:
+   Tweet IDs: 311975360667459585, 311964132205268992, 311828115477372928, 311468922962587651, 311432631726264320
+   Screen Names: timoreilly, MarkUry, zephoria, SarahPrevette, johnmaeda
