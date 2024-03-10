@@ -15,8 +15,9 @@ This Flask application serves as a simple API to retrieve Twitter data from a pr
 
 1. Make sure you have python installed.
 2. Open the terminal in VS Code.
-3. Type `python main.py run` or `python3 main.py run`
-4. Copy the link that it gives you `http://127.0.0.1:5000/`
+3. Type `pip install -r requirements.txt`
+4. Type `python main.py run` or `python3 main.py run`
+5. Copy the link that it gives you `http://127.0.0.1:5000/`
 
 ## Testing in Postman
 
